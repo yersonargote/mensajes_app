@@ -6,11 +6,11 @@ package com.lexson.mensajes_app;
  */
 public class MessagesService {
     public static void createMessage() {
-        MessageDAO.createMessageDB(new Message(1, "Hola Mundo, desde java", "Yo 2.0", ""));
+        MessageDAO.createMessageDB(new Message(1, "Hola, buen día", "Yo 2.0", ""));
     }
     
     public static void listMessages() {
-        
+        MessageDAO.readMessageDB();
     }
     
     public static void readMessage() {
@@ -18,10 +18,10 @@ public class MessagesService {
     }
     
     public static void deleteMessageDB() {
-        
+        MessageDAO.deleteMessageDB(1);
     }
     
     public static void updateMessageDB() {
-        
+        MessageDAO.updateMessageDB(new Message(1, "Hola, update desde java", "", ""));
     }
 }
